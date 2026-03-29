@@ -310,24 +310,24 @@ body {
   animation: pulse 2s infinite;
 }
 
- .wallet-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--dot-pink);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  height: 40px;
-  padding: 0 20px;
-  font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s;
-  position: relative;
-  overflow: hidden;
-}
+  .wallet-btn {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   background: var(--dot-pink);
+   color: #fff;
+   border: none;
+   border-radius: 10px;
+   height: 48px;
+   padding: 0 24px;
+   font-family: var(--font-display);
+   font-size: 16px;
+   font-weight: 700;
+   cursor: pointer;
+   transition: all 0.2s;
+   position: relative;
+   overflow: hidden;
+ }
 
 .wallet-btn::before {
   content: '';
@@ -348,19 +348,19 @@ body {
 }
 
 /* Button styles */
- .btn-primary {
-  background: linear-gradient(90deg, var(--polkadot-primary), var(--polkadot-primary-light));
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 14px 24px;
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 0 4px 16px rgba(230, 0, 122, 0.3);
-}
+  .btn-primary {
+   background: linear-gradient(90deg, var(--polkadot-primary), var(--polkadot-primary-light));
+   color: #fff;
+   border: none;
+   border-radius: 10px;
+   padding: 18px 32px;
+   font-family: var(--font-display);
+   font-size: 17px;
+   font-weight: 700;
+   cursor: pointer;
+   transition: all 0.2s;
+   box-shadow: 0 4px 20px rgba(230, 0, 122, 0.3);
+ }
 
 .btn-primary:hover {
   box-shadow: 0 6px 24px rgba(230, 0, 122, 0.4);
@@ -382,10 +382,10 @@ body {
   background: var(--bg-card2);
   color: var(--text-secondary);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 11px 20px;
+  border-radius: 10px;
+  padding: 14px 24px;
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
@@ -400,10 +400,10 @@ body {
   background: rgba(0,255,163,0.1);
   color: var(--success);
   border: 1px solid rgba(0,255,163,0.3);
-  border-radius: 8px;
-  padding: 11px 20px;
+  border-radius: 10px;
+  padding: 14px 24px;
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
@@ -537,10 +537,10 @@ body {
   background: rgba(230, 0, 122, 0.1);
   border: 1px solid rgba(230, 0, 122, 0.3);
   color: var(--polkadot-primary-light);
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
   white-space: nowrap;
@@ -701,9 +701,14 @@ body {
 .btn-ghost {
   background: transparent;
   color: var(--text-disabled);
-  font-size: 12px;
-  padding: 6px 12px;
+  font-size: 14px;
+  padding: 8px 16px;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .btn-ghost:hover {
@@ -711,15 +716,19 @@ body {
   border-color: rgba(255, 255, 255, 0.15);
 }
 
- .btn-metamask {
-  width: 100%;
-  background: linear-gradient(90deg, #F6851B, #FFA94D);
-  color: white;
-  padding: 14px;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 15px;
-}
+  .btn-metamask {
+   width: 100%;
+   background: linear-gradient(90deg, #F6851B, #FFA94D);
+   color: white;
+   padding: 18px 32px;
+   justify-content: center;
+   font-weight: 700;
+   font-size: 17px;
+   border-radius: 10px;
+   border: none;
+   cursor: pointer;
+   transition: all 0.2s;
+ }
 
 .btn-metamask:hover {
   transform: translateY(-2px);

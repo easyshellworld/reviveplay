@@ -167,16 +167,19 @@ export const Step05Swap: React.FC = () => {
           </p>
 
           {/* Swap 按钮 */}
-          <Button
-            onClick={handleSwap}
-            disabled={!isConnected || swapping || !amount}
-            loading={swapping}
-            className="w-full"
-          >
-            {swapStep === 0 && '⚡ 执行 Swap（两步：Approve + Swap）'}
-            {swapStep === 1 && '⏳ Step 1/2: 等待 Approve 确认...'}
-            {swapStep === 2 && '⏳ Step 2/2: 等待 Swap 确认...'}
-          </Button>
+          <div className="flex justify-center">
+            <Button
+              onClick={handleSwap}
+              disabled={!isConnected || swapping || !amount}
+              loading={swapping}
+              size="xl"
+              className="min-w-[400px]"
+            >
+              {swapStep === 0 && '⚡ 执行 Swap（两步：Approve + Swap）'}
+              {swapStep === 1 && '⏳ Step 1/2: 等待 Approve 确认...'}
+              {swapStep === 2 && '⏳ Step 2/2: 等待 Swap 确认...'}
+            </Button>
+          </div>
         </Card>
 
         <div className="space-y-4">

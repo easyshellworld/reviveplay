@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAccount, useReadContract } from 'wagmi';
 import { NFTCard } from '@/components/shared/NFTCard';
+import { Button } from '@/components/ui/Button';
 import { useMintNFT } from '@/hooks/useMintNFT';
 import { useAppStore } from '@/store/appStore';
 import { useAddToken } from '@/hooks/useAddToken';
@@ -156,23 +157,26 @@ export const Step06MintNFT: React.FC = () => {
               />
             </div>
 
-            <div className="flex flex-col gap-0 max-w-xs mx-auto">
-              <button 
-                className="btn btn-primary w-full"
+            <div className="flex flex-col items-center gap-4">
+              <Button
                 onClick={handleMint}
                 disabled={!isConnected || minting}
+                loading={minting}
+                size="xl"
+                className="min-w-[400px]"
               >
                 {minting ? 'Minting...' : '🎁 Mint NFT'}
-              </button>
+              </Button>
 
               {PLAYGROUND_NFT_ADDRESS !== '0x0000000000000000000000000000000000000000' && (
-                <button 
-                  className="btn btn-metamask mt-4 w-full"
+                <Button
                   onClick={handleAddNFTToWallet}
                   disabled={!isConnected}
+                  size="xl"
+                  className="min-w-[400px] bg-gradient-to-r from-[#F6851B] to-[#FFA94D] text-white border-none hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(246,133,27,0.3)]"
                 >
                 🦊 添加 NFT 到 MetaMask
-              </button>
+              </Button>
             )}
             </div>
            </div>
