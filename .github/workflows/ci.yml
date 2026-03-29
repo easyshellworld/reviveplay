@@ -47,7 +47,7 @@ jobs:
       - name: Run all tests
         run: npx hardhat test
 
-  # ─── Frontend: lint + type-check + test + build ────────────────────────
+  # ─── Frontend: type-check + test + build ──────────────────
   frontend:
     name: Frontend — type-check & test & build
     runs-on: ubuntu-latest
@@ -66,12 +66,7 @@ jobs:
           cache-dependency-path: frontend/package-lock.json
 
       - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
+        run: npm install
 
       - name: Type check
         run: npx tsc -b
