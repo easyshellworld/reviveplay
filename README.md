@@ -2,7 +2,6 @@
 
 ![Tests](https://github.com/easyshellworld/reviveplayground/actions/workflows/ci.yml/badge.svg)
 ![Node](https://img.shields.io/badge/node-22-brightgreen.svg)
-![License](https://img.shields.io/github/license/your-username/reviveplayground.svg)
 ![Status](https://img.shields.io/badge/status-active-blue.svg)
 
 > Polkadot Hub TestNet 交互式教学 playground，让初学者体验完整的 Web3 开发流程。
