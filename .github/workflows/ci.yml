@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
   cancel-in-progress: true
 
 jobs:
@@ -46,7 +46,6 @@ jobs:
 
       - name: Run all tests
         run: npx hardhat test
-        continue-on-error: false
 
   # ─── Frontend: lint + type-check + test + build ────────────────────────
   frontend:
@@ -60,7 +59,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: npm
