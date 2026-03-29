@@ -1,6 +1,5 @@
 # Polkadot Revive Playground
-
-![Tests](https://github.com/easyshellworld/reviveplayground/actions/workflows/ci.yml/badge.svg)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](https://github.com/easyshellworld/reviveplayground/actions)
 ![Node](https://img.shields.io/badge/node-22-brightgreen.svg)
 ![Status](https://img.shields.io/badge/status-active-blue.svg)
 
@@ -148,7 +147,6 @@ MIT License - 详见 [LICENSE](LICENSE)
 - [Polkadot](https://polkadot.network/) - 提供强大的区块链基础设施
 - [OpenZeppelin](https://openzeppelin.com/) - 安全智能合约库
 - [revive](https://github.com/polkadot/revive) - Polkadot REVM 实现
-- [oh-my-opencode](https://github.com/code-yeongyu/oh-my-openagent) - AI 辅助开发
 
 ---
 
