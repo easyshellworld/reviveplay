@@ -1,0 +1,37 @@
+{
+  "name": "polkadot-revive-playground",
+  "version": "1.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:dev": "vitest"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.0-alpha.13",
+    "@tanstack/react-query": "^5.25.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "tailwindcss": "^4.0.0-alpha.13",
+    "viem": "^2.8.10",
+    "wagmi": "^2.5.7",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/ui": "^4.1.2",
+    "jsdom": "^29.0.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vitest": "^4.1.2"
+  }
+}

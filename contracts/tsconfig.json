@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+    "rootDir": "./",
+    "ignoreDeprecations": "6.0"
+  },
+  "include": [
+    "contracts/**/*.sol",
+    "scripts/**/*.ts",
+    "test/**/*.ts",
+    "hardhat.config.ts"
+  ],
+  "files": [
+    "hardhat.config.ts"
+  ],
+  "references": [
+    { "path": "./tsconfig.node.json" }
+  ]
+}

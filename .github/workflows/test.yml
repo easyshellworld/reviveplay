@@ -1,0 +1,64 @@
+name: Frontend and Contracts Test
+
+on:
+  push:
+    branches: [ main, master, dev ]
+  pull_request:
+    branches: [ main, master, dev ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+
+    - name: Install dependencies (root)
+      run: |
+        if [ -f package-lock.json ]; then
+          npm ci
+        elif [ -f yarn.lock ]; then
+          yarn install --frozen-lockfile
+        else
+          npm install
+        fi
+
+    - name: Install contracts dependencies
+      working-directory: ./contracts
+      run: |
+        if [ -f package-lock.json ]; then
+          npm ci
+        elif [ -f yarn.lock ]; then
+          yarn install --frozen-lockfile
+        else
+          npm install
+        fi
+
+    - name: Install frontend dependencies
+      working-directory: ./frontend
+      run: |
+        if [ -f package-lock.json ]; then
+          npm ci
+        elif [ -f yarn.lock ]; then
+          yarn install --frozen-lockfile
+        else
+          npm install
+        fi
+
+    - name: Run contracts tests
+      working-directory: ./contracts
+      run: npm test
+
+    - name: Run frontend tests
+      working-directory: ./frontend
+      run: npm test
+
+    - name: Typecheck frontend
+      working-directory: ./frontend
+      run: npm run typecheck
