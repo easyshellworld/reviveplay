@@ -21,15 +21,8 @@ const resolveAddress = (envValue?: string): HexAddress => {
 };
 
 const getEnvValue = (key: 'VITE_PLAYGROUND_NFT_ADDRESS' | 'VITE_TEACHING_SWAP_ROUTER_ADDRESS'): string | undefined => {
-  if (typeof import.meta !== 'undefined' && 'env' in import.meta) {
-    return (import.meta.env as ImportMetaEnv & Record<string, string | undefined>)[key];
-  }
-
-  if (typeof process !== 'undefined') {
-    return process.env[key];
-  }
-
-  return undefined;
+  // In Vite frontend, environment variables are always available via import.meta.env
+  return (import.meta.env as ImportMetaEnv)[key];
 };
 
 export const PLAYGROUND_NFT_ADDRESS = resolveAddress(getEnvValue('VITE_PLAYGROUND_NFT_ADDRESS'));
