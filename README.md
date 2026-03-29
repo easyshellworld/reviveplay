@@ -1,6 +1,6 @@
 # Polkadot Revive Playground
 
-![Tests](https://github.com/easyshellworld/reviveplayground/actions/workflows/test.yml/badge.svg)
+![Tests](https://github.com/easyshellworld/reviveplayground/actions/workflows/ci.yml/badge.svg)
 ![Node](https://img.shields.io/badge/node-22-brightgreen.svg)
 ![License](https://img.shields.io/github/license/your-username/reviveplayground.svg)
 ![Status](https://img.shields.io/badge/status-active-blue.svg)
